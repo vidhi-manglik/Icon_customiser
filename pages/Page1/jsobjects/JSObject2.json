@@ -1,0 +1,25 @@
+{
+  "unpublishedCollection": {
+    "name": "JSObject2",
+    "pageId": "Page1",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\tmyVar1: [],\n\tmyVar2: {},\n\tmyFun1: () => {\n\t\t//write code here\n\t},\n\tmyFun2: async () => {\n\t\t//use async-await or promises\n\t\t\n\t\tvar list = fetch_vehicle_ids.data.listings;\n\t\tconsole.log(list.length)\n\t\tconsole.log(list)\n\t\tvar obj = {};\n\t\tfor(var i = 0 ; i < list.length; i++){\n\t\t\tconsole.log(list[i]['vehicle']['id']);\n\t\t\tconsole.log(list[i]['vehicle']['vehicle_name']);\n\t\t\tobj[list[i]['vehicle']['id']] = \"\";\n\t\t\t\n\t\t}\n\t\tthis.myVar2 = obj;\n\t\tconsole.log(obj);\n\t\treturn obj;\n\t}\n}",
+    "variables": [
+      {
+        "name": "myVar1",
+        "value": "[]"
+      },
+      {
+        "name": "myVar2",
+        "value": "{}"
+      }
+    ],
+    "userPermissions": []
+  },
+  "id": "Page1_JSObject2",
+  "deleted": false,
+  "gitSyncId": "63f468e3d4fdb02f01d56ab1_640b365a58ee9a1dff304383"
+}
