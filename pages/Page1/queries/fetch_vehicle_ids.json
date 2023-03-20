@@ -7,8 +7,7 @@
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin",
       "datasourceConfiguration": {
-        "sshProxyEnabled": false,
-        "url": "https://atlas-staging-ktor.porter.in"
+        "url": "http://atlas-prod-ktor.internal.porter.in"
       },
       "invalids": [],
       "messages": [],
