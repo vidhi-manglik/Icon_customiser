@@ -2,13 +2,12 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "Fetch_Geo_Region",
+    "name": "update_category",
     "datasource": {
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin",
       "datasourceConfiguration": {
-        "sshProxyEnabled": false,
-        "url": "https://porter.in"
+        "url": "https://atlas-staging-ktor.porter.in"
       },
       "invalids": [],
       "messages": [],
@@ -21,7 +20,7 @@
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
-      "path": "/api/public/geo_regions/geo_regions_details",
+      "path": "/vehicle_rollout/vehicles/update_category",
       "headers": [
         {
           "key": "content-type",
@@ -30,8 +29,9 @@
       ],
       "encodeParamsToggle": true,
       "queryParameters": [],
+      "body": "{\n\n    \"vehicles\" : {{Vehicles.updatedRows.map(\n\t\trow => row = {\n\t\t\t\"id\": row.allFields.id, \n\t\t\t\"vehicle_name\" : row.allFields.vehicle_name,\n\t\t\t\"display_name\" : row.allFields.vehicle_name,\n\t\t\t\"category\": row.updatedFields.category \n\t\t}\n\t)}}\n}\n",
       "bodyFormData": [],
-      "httpMethod": "GET",
+      "httpMethod": "POST",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -42,18 +42,24 @@
         "apiContentType": "application/json"
       }
     },
-    "executeOnLoad": true,
-    "dynamicBindingPathList": [],
+    "executeOnLoad": false,
+    "dynamicBindingPathList": [
+      {
+        "key": "body"
+      }
+    ],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [],
+    "jsonPathKeys": [
+      "Vehicles.updatedRows.map(\n\t\trow => row = {\n\t\t\t\"id\": row.allFields.id, \n\t\t\t\"vehicle_name\" : row.allFields.vehicle_name,\n\t\t\t\"display_name\" : row.allFields.vehicle_name,\n\t\t\t\"category\": row.updatedFields.category \n\t\t}\n\t)"
+    ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Page1_Fetch_Geo_Region",
+  "id": "Page1_update_category",
   "deleted": false,
-  "gitSyncId": "63f468e3d4fdb02f01d56ab1_640ad98a58ee9a1dff3042ac"
+  "gitSyncId": "63f468e3d4fdb02f01d56ab1_64c67ff68b23810a455dc7dd"
 }

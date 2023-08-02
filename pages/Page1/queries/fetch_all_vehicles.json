@@ -2,13 +2,12 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "Fetch_Geo_Region",
+    "name": "fetch_all_vehicles",
     "datasource": {
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin",
       "datasourceConfiguration": {
-        "sshProxyEnabled": false,
-        "url": "https://porter.in"
+        "url": "https://atlas-staging-ktor.porter.in"
       },
       "invalids": [],
       "messages": [],
@@ -21,13 +20,8 @@
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
-      "path": "/api/public/geo_regions/geo_regions_details",
-      "headers": [
-        {
-          "key": "content-type",
-          "value": "application/json"
-        }
-      ],
+      "path": "/vehicle_rollout/vehicles/fetch_all",
+      "headers": [],
       "encodeParamsToggle": true,
       "queryParameters": [],
       "bodyFormData": [],
@@ -39,7 +33,7 @@
         }
       ],
       "formData": {
-        "apiContentType": "application/json"
+        "apiContentType": "none"
       }
     },
     "executeOnLoad": true,
@@ -53,7 +47,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Page1_Fetch_Geo_Region",
+  "id": "Page1_fetch_all_vehicles",
   "deleted": false,
-  "gitSyncId": "63f468e3d4fdb02f01d56ab1_640ad98a58ee9a1dff3042ac"
+  "gitSyncId": "63f468e3d4fdb02f01d56ab1_64c40f20381dc26d81ca3037"
 }
