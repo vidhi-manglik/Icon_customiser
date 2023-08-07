@@ -20,7 +20,7 @@
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
-      "path": "/vehicle_icon_customiser/vehicle/save_icons",
+      "path": "/vehicle_rollout/icons/save_icons",
       "headers": [
         {
           "key": "content-type",

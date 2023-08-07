@@ -20,7 +20,7 @@
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
-      "path": "/vehicle_icon_customiser/vehicle/get_active_record",
+      "path": "/vehicle_rollout/icons/get_active_record",
       "headers": [],
       "encodeParamsToggle": true,
       "queryParameters": [
@@ -44,10 +44,10 @@
     "executeOnLoad": true,
     "dynamicBindingPathList": [
       {
-        "key": "queryParameters[0].value"
+        "key": "path"
       },
       {
-        "key": "path"
+        "key": "queryParameters[0].value"
       }
     ],
     "isValid": true,

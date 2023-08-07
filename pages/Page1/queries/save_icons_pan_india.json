@@ -7,7 +7,7 @@
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin",
       "datasourceConfiguration": {
-        "url": "https://atlas-staging-ktor.porter.in"
+        "url": "http://atlas-prod-ktor.internal.porter.in"
       },
       "invalids": [],
       "messages": [],
@@ -20,7 +20,7 @@
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
-      "path": "/vehicle_icon_customiser/vehicle/save_icons_pan_india",
+      "path": "/vehicle_rollout/icons/save_icons_pan_india",
       "headers": [
         {
           "key": "content-type",
