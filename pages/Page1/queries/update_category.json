@@ -29,7 +29,7 @@
       ],
       "encodeParamsToggle": true,
       "queryParameters": [],
-      "body": "{\n\n    \"vehicles\" : {{Vehicles.updatedRows.map(\n\t\trow => row = {\n\t\t\t\"id\": row.allFields.id, \n\t\t\t\"vehicle_name\" : row.allFields.vehicle_name,\n\t\t\t\"display_name\" : row.allFields.vehicle_name,\n\t\t\t\"category\": row.updatedFields.category \n\t\t}\n\t)}}\n}\n",
+      "body": "{\n\n    \"vehicles\" : {{Vehicles.updatedRows.map(\n\t\trow => row = {\n\t\t\t\"id\": row.allFields.id, \n\t\t\t\"vehicle_name\" : row.allFields.vehicle_name,\n\t\t\t\"display_name\" : row.allFields.vehicle_name,\n\t\t\t\"category\": row.updatedFields.category,\n\t\t\t\"geo_region_ids\": []\n\t\t}\n\t)}}\n}\n",
       "bodyFormData": [],
       "httpMethod": "POST",
       "selfReferencingDataPaths": [],
@@ -52,7 +52,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "Vehicles.updatedRows.map(\n\t\trow => row = {\n\t\t\t\"id\": row.allFields.id, \n\t\t\t\"vehicle_name\" : row.allFields.vehicle_name,\n\t\t\t\"display_name\" : row.allFields.vehicle_name,\n\t\t\t\"category\": row.updatedFields.category \n\t\t}\n\t)"
+      "Vehicles.updatedRows.map(\n\t\trow => row = {\n\t\t\t\"id\": row.allFields.id, \n\t\t\t\"vehicle_name\" : row.allFields.vehicle_name,\n\t\t\t\"display_name\" : row.allFields.vehicle_name,\n\t\t\t\"category\": row.updatedFields.category,\n\t\t\t\"geo_region_ids\": []\n\t\t}\n\t)"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
