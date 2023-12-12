@@ -29,7 +29,7 @@
       ],
       "encodeParamsToggle": true,
       "queryParameters": [],
-      "body": "{\n    \"start_date\" : {{start_date_pan_india.formattedDate+\":00\"}},\n    \"end_date\": {{end_date_pan_india.formattedDate+\":00\"}},\n\t\t\"vehicle_category_icon\" : {\n\t\t\t\t\"truck\": {{Trucks_Icon_Url.inputText}},\n\t\t\t\t\"two_wheeler\": {{Two_Wheeler_Icon_Url.inputText}},\n\t\t\t\t\"three_wheeler\": {{Three_Wheeler_Icon_Url.inputText}}\n\t\t}\n}",
+      "body": "{\n    \"start_date\" : {{start_date_pan_india.formattedDate+\":00\"}},\n    \"end_date\": {{end_date_pan_india.formattedDate+\":00\"}},\n\t\t\"vehicle_category_icon\" : {\n\t\t\t\t\"truck\": {{Trucks_Icon_Url.inputText}},\n\t\t\t\t\"two_wheeler\": {{Two_Wheeler_Icon_Url.inputText}},\n\t\t\t\t\"three_wheeler\": {{Three_Wheeler_Icon_Url.inputText}}\n\t\t},\n\"geo_region_ids\" : {{GeoRegion_multiselect.selectedOptionValues}}\n}",
       "httpMethod": "POST",
       "selfReferencingDataPaths": [],
       "formData": {
@@ -46,6 +46,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
+      "GeoRegion_multiselect.selectedOptionValues",
       "Three_Wheeler_Icon_Url.inputText",
       "Trucks_Icon_Url.inputText",
       "Two_Wheeler_Icon_Url.inputText",
